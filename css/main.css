@@ -1,12 +1,20 @@
 /* Main Site CSS */
 
+/* Main variables */
+:root{
+  --main-bg-color: #34678a;
+  --main-bg-color-dark: #0e1c25;
+  --main-accent-color: #ff3300;
+  --main-footer-color: #112;
+}
+
 /* Main elements */
 html {
   margin: 0 auto;
-  max-width: flex;
+  max-width: auto;
 }
 body {
-  background-color:#34678a;
+  background-color: var(--main-bg-color);
   font-family: verdana, sans-serif;
   font-size: 17px;
   padding: 0 1em 1em 1em;
@@ -17,54 +25,62 @@ header {
   padding: 0.5em;
   color: #fff;
 }
+article {
+  background-color: #fff;
+  padding-bottom: 1em;
+  /* padding-top: 1em; */
+}
 footer {
-  background-color: #112;
+  background-color: var(--main-footer-color);
   padding: 1em 0;
 }
 
 /* Title */
 .title{
-  display: flex;
-  max-width: 10em;
-  background-color: #ff3300;
+  /* display: flex; */
+  max-width: 20em;
+  background-color: var(--main-accent-color);
   justify-content: center;
-  padding: .5em;
+  align-items: center;
+  padding: .5em;  
 }
 
 /* Navbar */
 nav {
   margin-top: 2em;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
+  border-bottom: .2em solid var(--main-accent-color)
 }
 
 /* Navbar buttons */
 .btn-group{
-  justify-content: center;
+  justify-content: left;
   display: flex;
   flex-wrap: wrap;  
 }
 .btn-group .button {
-  background-color: #4CAF50; /* Green */
-  border: 1px solid green;;
-  color: white;
+  background-color: var(--main-bg-color);
+  border: .1em solid var(--main-bg-color);
+  color: #fff;
   padding: .5em;
   text-align: center;
-  font-size: 16px;
+  font-size: 90%;
   cursor: pointer;
   float: left;
   transition-duration: 0.4s;
 }
+/* Prevent double borders */
 .btn-group .button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+  border-right: none; 
 }
 .btn-group .button:hover {
-  background-color: #3e8e41; /* Green */
-  color: white;
+  background-color: var(--main-bg-color-dark);
+  color: #fff;
 }
 
 /* Text Styles */
 h1 {
-  font-size: 125%;
+  font-size: 150%;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -73,33 +89,41 @@ h1 {
   text-align: center;
 }
 h2 {
-  font-size: 105%;
-  margin: 0.5 0 0.6em 0;
-  text-align: center;
+  font-size: 125%;
+  padding: 1em;
+  text-align: left;
 }
 h3 {
-  font-size: 95%;
-  margin: 0.5em 0;
-  text-align: center;
+  font-size: 110%;
+  /* padding: .5em; */
+  text-align: left;
 }
 h4 {
   font-size: 95%;
   padding: 0.025em 0;
 }
 
+/* Assignments Explanation List */
+.assignmentsList{
+  padding: 0em 2em 2em 2em;
+  display: flex;
+  flex-direction: column;
+}
+
 p {
   font-size: 100%;
   line-height: 1.5em;
-  text-align: center;
+  text-align: left;
 }
 a:link {
-  color: #c00;
+  color: var(--main-accent-color);
   text-decoration: none;
 }
-a:visited {
+
+/* a:visited {
   color: #c00;
   text-decoration: none;
-}
+} */
 
 
 figure {
@@ -109,6 +133,10 @@ figure {
 }
 figcaption {
   font-size: 90%;
+}
+.abstractImg{
+  float: left;
+  margin: auto;
 }
 
 th {
@@ -139,8 +167,4 @@ table {
 td {
   font-size: 95%;
   line-height: 1.5em;
-}
-article {
-  background-color: #fff;
-  padding-bottom: 1em;
 }
