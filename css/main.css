@@ -1,16 +1,19 @@
 /* Main Site CSS */
+
+/* Main elements */
 html {
   margin: 0 auto;
-  max-width: 30em;
+  max-width: flex;
 }
 body {
+  background-color:#34678a;
   font-family: verdana, sans-serif;
   font-size: 17px;
   padding: 0 1em 1em 1em;
   margin: 0;
 }
 header {
-  background-color: #800;
+  /* background-color: #800; */
   padding: 0.5em;
   color: #fff;
 }
@@ -19,7 +22,47 @@ footer {
   padding: 1em 0;
 }
 
+/* Title */
+.title{
+  display: flex;
+  max-width: 10em;
+  background-color: #ff3300;
+  justify-content: center;
+  padding: .5em;
+}
 
+/* Navbar */
+nav {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/* Navbar buttons */
+.btn-group{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;  
+}
+.btn-group .button {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid green;;
+  color: white;
+  padding: .5em;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  transition-duration: 0.4s;
+}
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+.btn-group .button:hover {
+  background-color: #3e8e41; /* Green */
+  color: white;
+}
+
+/* Text Styles */
 h1 {
   font-size: 125%;
   font-weight: bold;
@@ -58,6 +101,7 @@ a:visited {
   text-decoration: none;
 }
 
+
 figure {
   display: block;
   margin: auto;
@@ -81,10 +125,6 @@ li {
   line-height: 1.4em;
   font-size: 95%;
 }
-nav {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 1em;
-}
 caption {
   text-align: left;
   font-weight: bold;
@@ -101,5 +141,6 @@ td {
   line-height: 1.5em;
 }
 article {
+  background-color: #fff;
   padding-bottom: 1em;
 }
