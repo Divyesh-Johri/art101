@@ -17,17 +17,31 @@ body {
   background-color: var(--main-bg-color);
   font-family: verdana, sans-serif;
   font-size: 17px;
-  padding: 0 1em 1em 1em;
+  padding: 0 5em 2em 5em;
   margin: 0;
+}
+@media only screen and (max-width: 600px){
+  /* Body with less margins if screen is on mobile */
+  body {
+    background-color: var(--main-bg-color);
+    font-family: verdana, sans-serif;
+    font-size: 17px;
+    padding: 0 1em 2em 1em;
+    margin: 0;
+  }
 }
 header {
   /* background-color: #800; */
   padding: 0.5em;
   color: #fff;
 }
-article {
+article {  
   background-color: #fff;
   padding-bottom: 1em;
+  margin: 1em 0 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* padding-top: 1em; */
 }
 footer {
@@ -93,7 +107,8 @@ h1 {
 }
 h2 {
   font-size: 125%;
-  padding: 1em;
+  /* padding: 1em; */
+  /* margin: 1em; */
   text-align: left;
 }
 h3 {
@@ -108,10 +123,12 @@ h4 {
 }
 
 
-section{
+section{  
   padding: 1em 2em 1em 2em;
+  max-width: 75em;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 p {
@@ -139,8 +156,12 @@ figure {
 figcaption {
   font-size: 90%;
 }
-.abstractImg{
+.leftImg{
   float: left;
+  margin: auto;
+}
+.rightImg{
+  float: right;
   margin: auto;
 }
 
