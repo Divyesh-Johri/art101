@@ -141,6 +141,7 @@ h4 {
 a:link {
   color: var(--main-accent-color);
   text-decoration: none;
+  width: 100%;
 }
 /* a:visited {
   color: #c00;
@@ -169,15 +170,14 @@ figcaption {
   margin: auto;
 }
 
-th {
-  padding: 0.7em 0 0.3em 0;
-}
-td {
-  padding: 0.2em 0;
-}
+/* Lists */
 ul,ol {  
   margin: 0.5em 2em;
   padding: 0;
+  width:100%;
+}
+ul,ol a{
+  word-wrap: break-word;
 }
 li {
   font-family: 'Open Sans', sans-serif;
@@ -185,6 +185,7 @@ li {
   margin: .25em 0 .25em;
   font-size: 100%;
 }
+
 caption {
   text-align: left;
   font-weight: bold;
